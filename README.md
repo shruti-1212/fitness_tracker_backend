@@ -1,5 +1,5 @@
 
-# 🏋️‍♀️ Fitness Tracker Backend - Complete Code Logic Explanation
+# 🏋️‍♀️ Fitness Tracker Backend
 
 ---
 
