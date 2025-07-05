@@ -3,6 +3,40 @@
 
 ---
 
+## 🎯 Core Features Implementation
+
+### 1. User Management
+
+- Registration with validation  
+- Login with session management  
+- User listing (admin feature)  
+
+### 2. Fitness Tracking
+
+- Workout logging with calories burned  
+- Meal logging with calorie consumption  
+- Goal setting and progress tracking  
+
+### 3. Analytics
+
+- Weekly progress reports  
+- Daily breakdowns  
+- Calorie balance calculations  
+- Exercise statistics  
+
+### 4. Data Persistence
+
+- H2 in-memory database  
+- JPA/Hibernate ORM  
+- Automatic table creation  
+- Foreign key relationships  
+
+---
+
+This architecture provides a clean, scalable, and maintainable fitness tracking application with clear separation of concerns and RESTful API design.
+
+---
+
 ## 📁 Project Structure Overview
 
 ```
@@ -242,36 +276,3 @@ Client Request → Controller → Service → Repository → Database
 - **Service Layer** - Business logic encapsulation  
 - **Dependency Injection** - Powered by Spring IoC container  
 
----
-
-## 🎯 Core Features Implementation
-
-### 1. User Management
-
-- Registration with validation  
-- Login with session management  
-- User listing (admin feature)  
-
-### 2. Fitness Tracking
-
-- Workout logging with calories burned  
-- Meal logging with calorie consumption  
-- Goal setting and progress tracking  
-
-### 3. Analytics
-
-- Weekly progress reports  
-- Daily breakdowns  
-- Calorie balance calculations  
-- Exercise statistics  
-
-### 4. Data Persistence
-
-- H2 in-memory database  
-- JPA/Hibernate ORM  
-- Automatic table creation  
-- Foreign key relationships  
-
----
-
-This architecture provides a clean, scalable, and maintainable fitness tracking application with clear separation of concerns and RESTful API design.
