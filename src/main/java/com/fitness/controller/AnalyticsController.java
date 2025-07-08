@@ -1,16 +1,21 @@
 package com.fitness.controller;
 
-import com.fitness.dto.WeeklyAnalyticsDTO;
-import com.fitness.service.AnalyticsService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fitness.dto.WeeklyAnalyticsDTO;
+import com.fitness.service.AnalyticsService;
+
 @RestController
-@RequestMapping("/fitness_tracker/analytics")
+@RequestMapping("/api/analytics")
 @CrossOrigin(origins = "*")
 public class AnalyticsController {
     

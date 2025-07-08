@@ -1,19 +1,27 @@
 package com.fitness.controller;
 
-import com.fitness.dto.UserDTO;
-import com.fitness.entity.User;
-import com.fitness.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import jakarta.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.fitness.dto.UserDTO;
+import com.fitness.entity.User;
+import com.fitness.service.UserService;
+
+import jakarta.validation.Valid;
+
 @RestController
-@RequestMapping("/fitness_tracker/users")
+@RequestMapping("/api/users")
 @CrossOrigin(origins = "*")
 public class UserController {
     
