@@ -29,7 +29,7 @@ public class WorkoutController {
     private WorkoutService workoutService;
     
     @PostMapping
-    public ResponseEntity<?> createWorkout(@RequestHeader("Authorization") String sessionToken,
+    public ResponseEntity<?> createWorkout(@RequestHeader(value = "Authorization", required = false) String sessionToken,
                                          @Valid @RequestBody WorkoutDTO workoutDTO) {
         try {
             Workout workout = workoutService.createWorkout(sessionToken, workoutDTO);
@@ -48,7 +48,7 @@ public class WorkoutController {
     }
     
     @GetMapping
-    public ResponseEntity<?> getUserWorkouts(@RequestHeader("Authorization") String sessionToken) {
+    public ResponseEntity<?> getUserWorkouts(@RequestHeader(value = "Authorization", required = false) String sessionToken) {
         try {
             List<Workout> workouts = workoutService.getUserWorkouts(sessionToken);
             Map<String, Object> response = new HashMap<>();

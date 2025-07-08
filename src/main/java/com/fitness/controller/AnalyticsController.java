@@ -23,7 +23,7 @@ public class AnalyticsController {
     private AnalyticsService analyticsService;
     
     @GetMapping("/weekly")
-    public ResponseEntity<?> getWeeklyAnalytics(@RequestHeader("Authorization") String sessionToken) {
+    public ResponseEntity<?> getWeeklyAnalytics(@RequestHeader(value = "Authorization", required = false) String sessionToken) {
         try {
             WeeklyAnalyticsDTO analytics = analyticsService.getWeeklyAnalytics(sessionToken);
             return ResponseEntity.ok(analytics);
